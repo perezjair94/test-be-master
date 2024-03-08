@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useFormState, useFormStatus } from "react-dom";
-import { authenticate } from "../lib/actions";
-import { Button } from "./button";
-import { Icon } from "./icon";
+import { useFormState, useFormStatus } from 'react-dom';
+import { authenticate } from '../lib/actions';
+import { Button } from './button';
+import { AlertCircle } from 'lucide-react';
 
 export default function LoginForm() {
   const [errorMessage, dispath] = useFormState(authenticate, undefined);
@@ -17,7 +17,7 @@ export default function LoginForm() {
             name="email"
             placeholder="Enter your email address"
             required
-            className="bg-gray-100 w-full p-4 mb-4 rounded-md"
+            className="mb-4 w-full rounded-md bg-gray-100 p-4"
           />
         </div>
         <div>
@@ -27,7 +27,7 @@ export default function LoginForm() {
             name="password"
             placeholder="password"
             required
-            className="bg-gray-100 w-full p-4 mb-4 rounded-md"
+            className="mb-4 w-full rounded-md bg-gray-100 p-4"
             minLength={6}
           />
         </div>
@@ -39,7 +39,7 @@ export default function LoginForm() {
         >
           {errorMessage && (
             <>
-              <Icon name="AlertCircle" className="h-5 w-5 text-red-500" />
+              <AlertCircle className="h-5 w-5 text-red-500" />
               <p className="text-sm text-red-500">{errorMessage}</p>
             </>
           )}
