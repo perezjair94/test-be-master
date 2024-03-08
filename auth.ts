@@ -1,11 +1,11 @@
-import NextAuth from "next-auth";
-import Credentials from "next-auth/providers/credentials";
-import bcrypt from "bcrypt";
-import { sql } from "@vercel/postgres";
-import { z } from "zod";
-import type { User } from "@/app/lib/definitions";
-import { users } from "@/app/lib/placeholder-data";
-import { authConfig } from "./auth.config";
+import NextAuth from 'next-auth';
+import Credentials from 'next-auth/providers/credentials';
+import bcrypt from 'bcrypt';
+import { sql } from '@vercel/postgres';
+import { z } from 'zod';
+import type { User } from '@/app/lib/definitions';
+import { users } from '@/app/lib/placeholder-data';
+import { authConfig } from './auth.config';
 
 // async function getUser(email: string): Promise<User | undefined> {
 //   try {
@@ -33,7 +33,7 @@ export const { auth, signIn, signOut } = NextAuth({
           if (password === user.password) return user;
         }
 
-        console.log("Invalid credentials");
+        console.log('Invalid credentials');
         return null;
       },
     }),
