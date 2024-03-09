@@ -10,3 +10,9 @@ export type Category = {
   name: string;
   image: string;
 };
+
+export type Movie = {
+  id: string;
+  title: string;
+  image: string;
+};
