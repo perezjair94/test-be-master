@@ -14,5 +14,9 @@ export type Category = {
 export type Movie = {
   id: string;
   title: string;
+  description: string;
   image: string;
+  video: string;
+  genres: string[];
+  stars: string[];
 };
