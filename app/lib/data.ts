@@ -43,6 +43,21 @@ export async function fetchMovies(
   }
 }
 
+export async function fetchMovie(
+  movie: Movie['id'],
+): Promise<Movie | undefined> {
+  noStore();
+  try {
+    const response = await fetcher(`/movies/${movie}`, {
+      next: { tags: ['movie'] },
+    });
+    return response;
+  } catch (error) {
+    console.error('Fetch Error:', error);
+    throw new Error('Failed to fetch movie data.');
+  }
+}
+
 export async function fetchHomeData(category: Category['id']) {
   noStore();
   try {
