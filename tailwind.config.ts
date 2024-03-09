@@ -7,7 +7,14 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        appear: {
+          '0%': { opacity: '0', top: '10px' },
+          '100%': { opacity: '1', top: '0' },
+        },
+      },
+    },
   },
   plugins: [],
 };
