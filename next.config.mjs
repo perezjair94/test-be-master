@@ -26,6 +26,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'disney.images.edge.bamgrid.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
