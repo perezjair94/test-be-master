@@ -7,7 +7,7 @@ type CategoryProps = Category & { active: boolean };
 
 function Card({ active, name, image }: CategoryProps) {
   return (
-    <div className="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all hover:ring hover:ring-gray-600 hover:ring-offset-2">
+    <div className="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all hover:ring hover:ring-yellow-500 hover:ring-offset-2">
       <Image
         src={image}
         alt="category-image"
