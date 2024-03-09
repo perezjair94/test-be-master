@@ -7,7 +7,7 @@ export default async function Categories() {
     return <span>No available data</span>;
   return (
     <section className="mx-auto max-w-screen-xl">
-      <div className="mt-[30px] grid grid-cols-5 gap-4">
+      <div className="mt-[30px] grid grid-cols-2 gap-4 md:grid-cols-5">
         {categories.map((category) => (
           <Card key={category.id} {...category} />
         ))}

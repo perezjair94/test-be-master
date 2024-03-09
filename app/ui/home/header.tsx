@@ -3,7 +3,7 @@ import { LogOut } from 'lucide-react';
 
 export default function Header() {
   return (
-    <header className="mx-auto max-w-screen-xl p-5 px-10">
+    <header className="mx-auto max-w-screen-xl p-5 md:px-10">
       <div className="flex justify-between">
         <h2 className="font-semibold">Movie App</h2>
         <form

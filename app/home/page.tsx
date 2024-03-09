@@ -11,8 +11,8 @@ export default async function Page({
     searchParams.category as string,
   );
   return (
-    <main className="px-[50px]">
-      <div className="mx-auto h-[120px] w-full max-w-screen-xl rounded-[20px] bg-gray-100" />
+    <main className="px-[10px] md:px-[50px]">
+      <div className="mx-auto h-[225px] w-full max-w-screen-xl rounded-lg bg-[url(https://cdn.marvel.com/content/1x/deadpool_poster_mh_desk_2_0.jpg)] bg-cover bg-center" />
       <Categories />
       <ContentCategory category={category} movies={movies || []} />
     </main>

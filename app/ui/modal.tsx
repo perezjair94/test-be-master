@@ -23,7 +23,7 @@ export default function Modal({ className, children, ...props }: ModalProps) {
         {...props}
       >
         <button
-          className="absolute right-[30px] top-[30px] z-50 cursor-pointer rounded-full bg-[#141414] p-2 focus:outline-2 focus:outline-white"
+          className="absolute right-[10px] top-[10px] z-50 cursor-pointer rounded-full bg-[#141414] p-2 focus:outline-2 focus:outline-white md:right-[30px] md:top-[30px]"
           onClick={handleClose}
         >
           <X />

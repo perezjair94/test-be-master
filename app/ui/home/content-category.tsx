@@ -2,7 +2,7 @@ import { Category, Movie } from '@/app/lib/definitions';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function Card({ id, title, image }: Movie) {
+function Card({ id, image }: Movie) {
   return (
     <Link href={`/home/content-details/${id}`}>
       <div className="group relative h-[400px] overflow-hidden rounded-md bg-gray-50 transition-all hover:ring hover:ring-white/90 hover:ring-offset-2 hover:ring-offset-[#141414]">
@@ -26,9 +26,9 @@ export default function ContentCategory({
 }) {
   return (
     <>
-      <section className="my-10">
+      <section className="mx-auto my-10 max-w-screen-xl">
         <h2 className="mb-2 font-bold">{category?.name}</h2>
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
           {movies.map((movie) => (
             <Card key={movie.id} {...movie} />
           ))}

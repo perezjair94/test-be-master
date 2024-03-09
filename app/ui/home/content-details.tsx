@@ -6,24 +6,24 @@ export default async function ContentDetails({ movie }: ContnetDetails) {
   const data = await fetchMovie(movie);
   if (!data) return <span>Data not available</span>;
   return (
-    <main className="mx-auto max-w-screen-xl">
+    <main className="mx-auto max-w-screen-xl overflow-hidden">
       <div>
         {data.video ? (
           <video
-            className="relative h-[450px] w-full object-cover object-center"
+            className="h-200px relative w-full object-cover object-center md:h-[450px]"
             src={data.video}
             autoPlay
             loop
           />
         ) : null}
       </div>
-      <div className="p-10">
-        <div className="flex gap-10">
-          <div className="w-[60%]">
+      <div className="p-5 md:p-10">
+        <div className="flex flex-col gap-10 md:flex-row">
+          <div className="md:w-[60%]">
             <h2 className="text-xl font-bold">{data.title}</h2>
             <p className="mt-2 text-sm">{data.description}</p>
           </div>
-          <div className="w-[40%]">
+          <div className="md:w-[40%]">
             <div>
               <h4 className="text-sm text-gray-400">Generós:</h4>
               <div className="mt-1 text-wrap text-sm">
