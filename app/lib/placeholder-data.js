@@ -38,4 +38,28 @@ const categories = [
   },
 ];
 
-module.exports = { users, categories };
+const movies = [
+  {
+    id: 'f47d9e5a-84c2-4d1b-a9eb-9c3b71234567',
+    title: 'X-MEN 97',
+    image:
+      'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2019/06/mejores-comics-x-men.jpg?tf=1920x',
+    category: categories[0].id,
+  },
+  {
+    id: '8a3f6b21-2e78-4c9a-afbd-1e5d8e876543',
+    title: 'X-MEN Primera Generación',
+    image:
+      'https://disney.images.edge.bamgrid.com/ripcut-delivery/v1/variant/disney/3976bbac-69a7-4fe6-b4fd-aa1b5df0d483/scale?aspectRatio=1.78&format=webp&width=1440',
+    category: categories[0].id,
+  },
+  {
+    id: 'b9c0a8d4-6f32-45e7-8921-3a7f0f987654',
+    title: 'X-MEN Dark Phoenix',
+    image:
+      'https://disney.images.edge.bamgrid.com/ripcut-delivery/v1/variant/disney/e2c85662-bf6f-4aaa-a6e2-cd03470a2a08/scale?aspectRatio=1.78&format=webp&width=1440',
+    category: categories[0].id,
+  },
+];
+
+module.exports = { users, categories, movies };
