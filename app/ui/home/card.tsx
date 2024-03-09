@@ -17,10 +17,10 @@ export default function Card({ id, name, image }: Category) {
           src={image}
           alt="category-image"
           className={clsx(
-            'absolute object-cover brightness-[60%]  group-hover:scale-125',
+            'absolute object-cover group-hover:scale-125',
             active
-              ? 'scale-125 grayscale-0'
-              : 'grayscale group-hover:grayscale-0',
+              ? 'scale-125 brightness-75 grayscale-0'
+              : 'brightness-[30%] grayscale group-hover:brightness-75 group-hover:grayscale-0',
           )}
           fill
         />
