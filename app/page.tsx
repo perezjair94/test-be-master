@@ -24,7 +24,7 @@ export default async function Home() {
               Marvel movies, TV shows, and more
             </h2>
             <p className="text-center text-lg">
-              Starts at COP 16,900. Cancel anytime.
+              Starts at USD {plans[2].price}. Cancel anytime.
             </p>
             <Link href="/login">
               <button className="rounded-md bg-red-600 p-2 px-4 transition-opacity hover:opacity-90">

@@ -238,7 +238,7 @@ const plans = [
     name: 'Basic',
     description:
       'A great way to enjoy all your favorite shows and movies on a budget.',
-    price: 9.94,
+    price: 4.32,
   },
 ];
 
