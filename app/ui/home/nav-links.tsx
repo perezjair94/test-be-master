@@ -13,6 +13,10 @@ const links = [
     name: 'Movies',
     href: '/home/movies',
   },
+  {
+    name: 'My List',
+    href: '/home/my-list',
+  },
 ];
 
 export default function NavLinks() {

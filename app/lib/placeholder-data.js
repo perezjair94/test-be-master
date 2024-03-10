@@ -211,4 +211,12 @@ const movies = [
   },
 ];
 
-module.exports = { users, categories, movies };
+const favouriteMovies = [
+  'f47d9e5a-84c2-4d1b-a9eb-9c3b71234567',
+  '5c9e7a1b-3d28-482f-b614-7f0e5d876543',
+  'c8d6b2a4-3f9e-4757-ae21-9b1c01876543',
+  '9e8a3b47-1c6d-4f82-ae57-0d9c61876543',
+  'b3f84a7d-6521-4c0f-9d8e-175a2e876543',
+];
+
+module.exports = { users, categories, movies, favouriteMovies };
