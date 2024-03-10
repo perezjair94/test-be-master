@@ -85,7 +85,7 @@ export default async function Home() {
               coming up, to 70 years ago.
             </p>
           </div>
-          <div className="absolute -bottom-40 h-[500px] w-[400px] md:right-10">
+          <div className="absolute -bottom-52  h-[500px] w-[400px] md:-right-10 md:h-[650px] md:w-[500px]">
             <Image
               src="/wolverine.png"
               sizes="(min-width: 400px) 100vw, 100vw"
