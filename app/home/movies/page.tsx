@@ -11,8 +11,8 @@ export default async function Page() {
       </p>
     );
   return (
-    <main className="mx-auto mt-2 max-w-screen-xl px-5 md:px-10">
-      <h2 className="mb-5 text-4xl font-semibold">Movies</h2>
+    <main className="mx-auto mb-10 mt-2 max-w-screen-xl px-5 md:px-10">
+      <h2 className="mb-5 text-2xl font-semibold md:text-4xl">Movies</h2>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {movies.map((movie) => (
           <Link key={movie.id} href={`/home/content-details/${movie.id}`}>
