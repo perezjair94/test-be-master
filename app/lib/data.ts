@@ -46,6 +46,19 @@ export async function fetchMovies(
   }
 }
 
+export async function fetchFavouriteMovies(): Promise<Movie[] | undefined> {
+  noStore();
+  try {
+    const response = await fetcher('/movies/favourites', {
+      next: { tags: ['favaouriteMovies'] },
+    });
+    return response;
+  } catch (error) {
+    console.error('Fetch Error:', error);
+    throw new Error('Failed to fetch favourite movies data.');
+  }
+}
+
 export async function fetchMovie(
   movie: Movie['id'],
 ): Promise<Movie | undefined> {
