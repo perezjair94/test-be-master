@@ -19,4 +19,5 @@ export type Movie = {
   video: string;
   genres: string[];
   stars: string[];
+  isFavourite?: boolean;
 };

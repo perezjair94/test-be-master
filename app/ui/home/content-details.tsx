@@ -1,4 +1,5 @@
 import { fetchMovie } from '@/app/lib/data';
+import { Heart } from 'lucide-react';
 
 type ContnetDetails = { movie: string };
 
@@ -7,16 +8,27 @@ export default async function ContentDetails({ movie }: ContnetDetails) {
   if (!data) return <p className="mt-4 text-gray-400">No data available.</p>;
   return (
     <main className="mx-auto max-w-screen-xl overflow-hidden">
-      <div>
-        {data.video ? (
+      {data.video ? (
+        <div className="relative">
           <video
-            className="h-200px relative w-full object-cover object-center md:h-[450px]"
+            className="relative h-[200px] w-full object-cover object-center md:h-[450px]"
             src={data.video}
             autoPlay
             loop
           />
-        ) : null}
-      </div>
+          {data.isFavourite ? (
+            <div className="absolute inset-0 z-40 h-[200px] w-full bg-[linear-gradient(0deg,#181818,transparent_50%)] md:h-[450px]">
+              <div className="flex h-full w-full items-end justify-end p-[30px]">
+                <div className="h-[40px] w-[40px] rounded-full border-2 border-[hsla(0,0%,100%,.5)] bg-[rgba(42,42,42,.6)]">
+                  <div className="flex h-full items-center justify-center">
+                    <Heart className="h-5" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : null}
+        </div>
+      ) : null}
       <div className="p-5 md:p-10">
         <div className="flex flex-col gap-10 md:flex-row">
           <div className="md:w-[60%]">
