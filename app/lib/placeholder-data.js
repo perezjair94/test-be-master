@@ -219,4 +219,27 @@ const favouriteMovies = [
   'b3f84a7d-6521-4c0f-9d8e-175a2e876543',
 ];
 
-module.exports = { users, categories, movies, favouriteMovies };
+const plans = [
+  {
+    id: '6a9d8c4b-f257-47e3-bc1a-3d9f6c987654',
+    name: 'Premium',
+    description:
+      'A cinematic experience with the best picture and audio quality.',
+    price: 9.94,
+  },
+  {
+    id: '3c1f8e9b-5742-4d86-a501-eb72d0123456',
+    name: 'Standard',
+    description: 'All the entertainment you love, in Full HD video quality.',
+    price: 6.88,
+  },
+  {
+    id: '8b7f1e2d-493c-4a65-831d-6c54a1987654',
+    name: 'Basic',
+    description:
+      'A great way to enjoy all your favorite shows and movies on a budget.',
+    price: 9.94,
+  },
+];
+
+module.exports = { users, categories, movies, favouriteMovies, plans };

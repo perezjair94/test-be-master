@@ -21,3 +21,10 @@ export type Movie = {
   stars: string[];
   isFavourite?: boolean;
 };
+
+export type Plan = {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+};
