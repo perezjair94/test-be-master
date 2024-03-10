@@ -29,13 +29,16 @@ export async function fetchCategory(category: Category['id']) {
 }
 
 export async function fetchMovies(
-  category: Category['id'],
+  category?: Category['id'],
 ): Promise<Movie[] | undefined> {
   noStore();
   try {
-    const response = await fetcher(`/movies?category=${category}`, {
-      next: { tags: ['movies'] },
-    });
+    const response = await fetcher(
+      category ? `/movies?category=${category}` : '/movies',
+      {
+        next: { tags: ['movies'] },
+      },
+    );
     return response;
   } catch (error) {
     console.error('Fetch Error:', error);
