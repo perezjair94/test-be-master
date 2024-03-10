@@ -16,13 +16,15 @@ export default function Card({ id, name, image }: Category) {
         <Image
           src={image}
           alt="category-image"
+          fill
+          sizes="(min-width: 400px) 100vw, 100vw"
           className={clsx(
             'absolute object-cover transition-all group-hover:scale-125',
             active
               ? 'scale-125 brightness-75 grayscale-0'
               : 'brightness-50 grayscale group-hover:brightness-75 group-hover:grayscale-0',
           )}
-          fill
+          priority
         />
         <div className="relative flex h-[120px] items-center justify-center">
           <span className="block text-center font-bold leading-tight text-white drop-shadow-md">

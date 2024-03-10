@@ -10,6 +10,8 @@ function Card({ id, image }: Movie) {
           src={image}
           className="absolute object-cover transition-all group-hover:scale-110"
           alt="movie"
+          sizes="100vw"
+          priority
           fill
         />
       </div>

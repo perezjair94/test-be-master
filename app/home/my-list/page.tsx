@@ -21,6 +21,8 @@ export default async function Page() {
                 src={movie.image}
                 className="absolute object-cover transition-all group-hover:scale-110"
                 alt="movie"
+                sizes="100vw"
+                priority
                 fill
               />
             </div>
