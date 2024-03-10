@@ -33,7 +33,7 @@ export default function NavLinks() {
               'font-bold': pathname === link.href,
             })}
           >
-            <p className="text-sm">{link.name}</p>
+            <p className="md:text-sm">{link.name}</p>
           </Link>
         );
       })}

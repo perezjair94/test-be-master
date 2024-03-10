@@ -13,6 +13,14 @@ const config: Config = {
           '0%': { opacity: '0', top: '10px' },
           '100%': { opacity: '1', top: '0' },
         },
+        'slide-right': {
+          '0%': { opacity: '0', transform: 'translateX(-100%)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        dispel: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
     },
   },
