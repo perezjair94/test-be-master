@@ -24,7 +24,7 @@ export default function Header() {
                 : 'hidden md:inline-block',
             )}
           >
-            <div className="flex h-full max-w-[70%] flex-col gap-2 bg-[#141414] px-[20px] motion-safe:animate-[slide-right_0.2s_ease-in-out_0s] md:flex-row md:items-center md:gap-4">
+            <div className="flex h-full w-[70%] flex-col gap-2 bg-[#141414] px-[20px] motion-safe:animate-[slide-right_0.2s_ease-in-out_0s] md:w-auto md:flex-row md:items-center md:gap-4">
               <NavLinks />
             </div>
           </div>
