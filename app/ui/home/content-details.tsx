@@ -4,7 +4,7 @@ type ContnetDetails = { movie: string };
 
 export default async function ContentDetails({ movie }: ContnetDetails) {
   const data = await fetchMovie(movie);
-  if (!data) return <span>Data not available</span>;
+  if (!data) return <p className="mt-4 text-gray-400">No data available.</p>;
   return (
     <main className="mx-auto max-w-screen-xl overflow-hidden">
       <div>
