@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Header from '@/app/ui/home/header';
+import { MenuProvider } from '../lib/context';
 
 export default function Layout({
   children,
@@ -9,10 +10,12 @@ export default function Layout({
   details: ReactNode;
 }) {
   return (
-    <div>
-      <Header />
-      {details}
-      {children}
-    </div>
+    <MenuProvider>
+      <div>
+        <Header />
+        {details}
+        {children}
+      </div>
+    </MenuProvider>
   );
 }

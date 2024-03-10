@@ -2,18 +2,17 @@
 
 import NavLinks from './nav-links';
 import clsx from 'clsx';
-import { useOnClickOutside, useToggle } from 'usehooks-ts';
 import LogoutButton from '@/app/ui/logout-button';
 import { Menu } from 'lucide-react';
-import { useRef } from 'react';
+import { useMenu } from '@/app/lib/context';
 
 export default function Header() {
-  const [open, toggle] = useToggle();
+  const { open, onToggle } = useMenu();
   return (
     <header className="mx-auto max-w-screen-xl p-5 md:px-10">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4 md:gap-10">
-          <Menu className="md:hidden" onClick={toggle} />
+          <Menu className="md:hidden" onClick={onToggle} />
           <h2 className="font-semibold text-orange-500 md:text-xl">
             Movie App
           </h2>
