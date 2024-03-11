@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000/api';
+const baseUrl = `${process.env.API_URL}/api`;
 
 export const fetcher = async (url: string, options: RequestInit) => {
   try {
