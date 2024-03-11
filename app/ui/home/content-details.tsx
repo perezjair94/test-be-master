@@ -10,14 +10,13 @@ export default async function ContentDetails({ movie }: ContnetDetails) {
     <main className="mx-auto max-w-screen-xl overflow-hidden">
       {data.video ? (
         <div className="relative">
-          <video
+          <iframe
             className="relative h-[200px] w-full object-cover object-center md:h-[450px]"
-            src={data.video}
-            autoPlay
-            loop
+            src={`${data.video}?autoplay=1&muted=1&loop=1&controls=0`}
+            allow="autoplay"
           />
-          {data.isFavourite ? (
-            <div className="absolute inset-0 z-40 h-[200px] w-full bg-[linear-gradient(0deg,#181818,transparent_50%)] md:h-[450px]">
+          <div className="absolute inset-0 z-40 h-[200px] w-full bg-[linear-gradient(0deg,#181818,transparent_50%)] md:h-[450px]">
+            {data.isFavourite ? (
               <div className="flex h-full w-full items-end justify-end p-[30px]">
                 <div className="h-[40px] w-[40px] rounded-full border-2 border-[hsla(0,0%,100%,.5)] bg-[rgba(42,42,42,.6)]">
                   <div className="flex h-full items-center justify-center">
@@ -25,8 +24,8 @@ export default async function ContentDetails({ movie }: ContnetDetails) {
                   </div>
                 </div>
               </div>
-            </div>
-          ) : null}
+            ) : null}
+          </div>
         </div>
       ) : null}
       <div className="p-5 md:p-10">
